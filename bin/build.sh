@@ -1,5 +1,41 @@
 #!/bin/bash
 
+# set default values for options
+message="Built on now=$(date +"%Y-%m-%d-%H:%M:%S")"
+
+usage="Usage: $0 [-m <message>] [-h]
+
+  -m, --message <message>   Set the commit message (default: \"$message\")
+  -h, --help     Display this usage message"
+
+# parse command-line options
+while getopts "m:-:" option; do
+    case "${option}" in
+        m)
+            message=${OPTARG}
+            ;;
+        h | help)
+            echo "$usage"
+            exit
+            ;;
+        -)
+            case "${OPTARG}" in
+                message=*)
+                    message=${OPTARG#*=}
+                    ;;
+                message)
+                    message=${!OPTIND}
+                    OPTIND=$((OPTIND + 1))
+                    ;;
+                help)
+                    echo "$usage"
+                    exit
+                    ;;
+            esac
+            ;;
+    esac
+done
+
 now=$(date +%d%H%M%S)
 generalOptions="--jet --no-interaction --force"
 installOptions=(
@@ -50,7 +86,7 @@ for buildOptions in "${installOptions[@]}"; do
     git -C $build checkout stubs ./
 
     git -C $build add .
-    git -C $build commit -m "Built on now=$(date +"%Y-%m-%d-%H:%M:%S")"
+    git -C $build commit -m "$message"
 
     git -C $build push -u origin $build
 
