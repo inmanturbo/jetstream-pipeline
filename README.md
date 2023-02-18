@@ -12,11 +12,11 @@ bash ./bin/build.sh
 
 ## Builds
 
-- [Livewire stack with teams and pest](tree/livewire-teams-pest)
-- [Livewire stack with teams and phpunit](tree/livewire-teams-phpunit)
-- [Livewire stack with pest](tree/livewire-pest)
-- [Livewire stack with phpunit](tree/livewire-phpunit)
-- [Inertia stack with teams and pest](tree/inertia-teams-pest)
-- [Inertia stack with teams and phpunit](tree/inertia-teams-phpunit)
-- [Inertia stack with pest](tree/inertia-pest)
-- [Inertia stack with phpunit](tree/inertia-phpunit)
+- [Livewire stack with teams and pest](https://github.com/inmanturbo/jetstream-pipeline/tree/livewire-teams-pest)
+- [Livewire stack with teams and phpunit](https://github.com/inmanturbo/jetstream-pipeline/tree/livewire-teams-phpunit)
+- [Livewire stack with pest](https://github.com/inmanturbo/jetstream-pipeline/tree/livewire-pest)
+- [Livewire stack with phpunit](https://github.com/inmanturbo/jetstream-pipeline/tree/livewire-phpunit)
+- [Inertia stack with teams and pest](https://github.com/inmanturbo/jetstream-pipeline/tree/inertia-teams-pestt)
+- [Inertia stack with teams and phpunit](https://github.com/inmanturbo/jetstream-pipeline/tree/inertia-teams-phpunit)
+- [Inertia stack with pest](https://github.com/inmanturbo/jetstream-pipeline/tree/inertia-pest)
+- [Inertia stack with phpunit](https://github.com/inmanturbo/jetstream-pipeline/tree/inertia-phpunit)
